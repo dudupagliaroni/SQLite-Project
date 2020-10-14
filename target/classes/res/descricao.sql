@@ -1,4 +1,4 @@
-drop table if exists person;
-create table person (id integer, name string);
-insert into person values(1, 'leo');
-insert into person values(2, 'yui');
+
+create table if not exists person (id integer, name string);
+create table if not exists person2 (id integer, name string);
+

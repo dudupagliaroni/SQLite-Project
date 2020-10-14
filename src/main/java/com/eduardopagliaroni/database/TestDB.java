@@ -24,6 +24,14 @@ public class TestDB {
 //			
 //			System.out.println(sql);
 			
+			
+			Person p = new Person();
+			p.setId(3);
+			p.setName("Leonardo");
+			
+			PersonDao dao = new PersonDao();
+			dao.insert(p);
+			
 			ResultSet rs = statement.executeQuery("select * from person");
 			while (rs.next()) {
 				// read the result set
