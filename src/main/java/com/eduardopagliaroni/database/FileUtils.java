@@ -8,15 +8,15 @@ import java.nio.charset.StandardCharsets;
 import java.util.logging.Logger;
 
 public class FileUtils {
-	
-	private static final Logger LOG = Logger.getLogger(FileUtils.class.getName());
 
+	private static final Logger LOG = Logger.getLogger(FileUtils.class.getName());
 
 	public static String loadTextFile(final String filename) throws IOException {
 
 		long time = System.currentTimeMillis();
 
 		InputStream inputStream = FileUtils.class.getResourceAsStream(filename);
+
 		InputStreamReader streamReader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
 		BufferedReader reader = new BufferedReader(streamReader);
 		StringBuilder sb = new StringBuilder();

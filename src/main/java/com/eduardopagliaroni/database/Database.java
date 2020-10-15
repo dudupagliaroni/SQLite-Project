@@ -21,7 +21,6 @@ public class Database {
 
 			statement.executeUpdate(sql);
 
-
 		} catch (Exception e) {
 			System.err.println("Houve um problema ao criar o DB");
 			e.printStackTrace();
