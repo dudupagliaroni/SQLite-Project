@@ -8,6 +8,11 @@ public class Person {
 	public Person() {
 
 	}
+	
+	public Person(int _id, String _name) {
+		this.id = _id;
+		this.name = _name;
+	}
 
 	public int getId() {
 		return id;
