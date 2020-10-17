@@ -11,9 +11,9 @@ public class TestDB {
 
 	public static void main(String[] args) throws SQLException {
 
-		Janela janela = new Janela();
-		janela.main(args);
-		
+//		Janela janela = new Janela();
+//		janela.main(args);
+//		
 
 	}
 

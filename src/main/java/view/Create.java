@@ -9,6 +9,7 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
 
 import com.eduardopagliaroni.database.Person;
 import com.eduardopagliaroni.database.PersonDao;
@@ -22,6 +23,7 @@ public class Create extends JPanel {
 	
 	private JTextField txtId;
 	private JTextField txtNome;
+	private DefaultTableModel modelo = new DefaultTableModel();
 
 	public Create() {
 
@@ -31,12 +33,12 @@ public class Create extends JPanel {
 
 		JLabel lbl_ld = new JLabel("Id");
 		lbl_ld.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lbl_ld.setBounds(66, 46, 28, 26);
+		lbl_ld.setBounds(66, 40, 28, 26);
 		this.add(lbl_ld);
 
 		txtId = new JTextField();
 		txtId.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		txtId.setBounds(147, 46, 45, 26);
+		txtId.setBounds(147, 40, 45, 26);
 		this.add(txtId);
 		txtId.setColumns(10);
 
@@ -63,6 +65,7 @@ public class Create extends JPanel {
 					pDao.insert(p);
 					txtId.setText("");
 					txtNome.setText("");
+					Read.pesquisar(modelo);
 				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -72,7 +75,7 @@ public class Create extends JPanel {
 		});
 
 		btnAdd.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		btnAdd.setBounds(66, 159, 113, 36);
+		btnAdd.setBounds(66, 172, 113, 36);
 		this.add(btnAdd);
 
 	}

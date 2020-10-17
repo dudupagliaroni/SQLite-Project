@@ -12,6 +12,9 @@ import javax.swing.table.DefaultTableModel;
 import com.eduardopagliaroni.database.Person;
 import com.eduardopagliaroni.database.PersonDao;
 import java.awt.Font;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Read extends JPanel {
 	/**
@@ -26,12 +29,24 @@ public class Read extends JPanel {
 		this.setSize(600,400);
 		
 		JScrollPane scrollPane = new JScrollPane(table);
-		scrollPane.setBounds(100, 30, 400, 250);
+		scrollPane.setBounds(100, 30, 400, 220);
 		add(scrollPane);
 		
 		table = new JTable(modelo);
 		table.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		scrollPane.setViewportView(table);
+		
+		JButton btnAtualizar = new JButton("Atualizar");
+		btnAtualizar.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		btnAtualizar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				pesquisar(modelo);
+			}
+		});
+		
+		btnAtualizar.setBounds(238, 260, 123, 29);
+		add(btnAtualizar);
+		
 		modelo.addColumn("Id");
 		modelo.addColumn("Name");
 		table.getColumnModel().getColumn(0).setPreferredWidth(40);
@@ -42,9 +57,7 @@ public class Read extends JPanel {
 
 
 		
-//		PersonDao dao = new PersonDao();
-//		List<Person> pessoas = new ArrayList<Person>();
-//		pessoas = dao.getAll();
+
 		
 
 		
