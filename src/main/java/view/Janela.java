@@ -1,16 +1,16 @@
 package view;
 
 import java.awt.Font;
+import java.sql.SQLException;
 
 import javax.swing.JFrame;
-import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 
 
 public class Janela {
 
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws SQLException {
 
 		JFrame frame = new JFrame("CRUD Básico");
 		frame.setSize(600, 400);
@@ -26,19 +26,19 @@ public class Janela {
 		//inserir a tab no frame
 		frame.getContentPane().add(tabbedPane);
 
-		Inserir inserir = new Inserir();
+		Create inserir = new Create();
 		tabbedPane.addTab("Inserir", null, inserir, null);
 
 
- 		Listar listar = new Listar();
+ 		Read listar = new Read();
 		tabbedPane.addTab("Listar", null, listar, null);
 
 
-		JPanel panel_2 = new JPanel();
-		tabbedPane.addTab("Atualizar", null, panel_2, null);
+		Update atualizar = new Update();
+		tabbedPane.addTab("Atualizar", null, atualizar, null);
 
-		JPanel panel_3 = new JPanel();
-		tabbedPane.addTab("Deletar", null, panel_3, null);
+		Delete deletar = new Delete();
+		tabbedPane.addTab("Deletar", null, deletar, null);
 
 	}
 	
