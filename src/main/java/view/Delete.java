@@ -1,6 +1,9 @@
 package view;
 
 import java.awt.Font;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.sql.SQLException;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -9,10 +12,6 @@ import javax.swing.JTextField;
 
 import com.eduardopagliaroni.database.Person;
 import com.eduardopagliaroni.database.PersonDao;
-
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.sql.SQLException;
 
 public class Delete extends JPanel {
 

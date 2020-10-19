@@ -3,8 +3,6 @@ package com.eduardopagliaroni.database;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-import view.Janela;
-
 public class TestDB {
 
 	static Connection con = null;
