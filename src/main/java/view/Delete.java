@@ -13,6 +13,7 @@ import javax.swing.JTextField;
 import com.eduardopagliaroni.database.Person;
 import com.eduardopagliaroni.database.PersonDao;
 
+@SuppressWarnings("serial")
 public class Delete extends JPanel {
 
 	private JTextField txtBuscarId;
@@ -32,9 +33,9 @@ public class Delete extends JPanel {
 		add(txtBuscarId);
 		txtBuscarId.setColumns(10);
 
-		lblOutput = new JLabel("Output");
+		lblOutput = new JLabel("");
 		lblOutput.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblOutput.setBounds(46, 139, 105, 20);
+		lblOutput.setBounds(98, 140, 265, 20);
 		add(lblOutput);
 
 		JButton btnBuscarId = new JButton("Buscar");
@@ -77,7 +78,11 @@ public class Delete extends JPanel {
 		btnDeletar.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		btnDeletar.setBounds(46, 215, 105, 27);
 		add(btnDeletar);
+		
+		JLabel lblNewLabel = new JLabel("Nome:");
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel.setBounds(46, 140, 55, 19);
+		add(lblNewLabel);
 
 	}
-
 }

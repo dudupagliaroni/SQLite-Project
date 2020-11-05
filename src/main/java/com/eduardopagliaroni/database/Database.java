@@ -17,7 +17,7 @@ public class Database {
 			java.sql.Statement statement = connection.createStatement();
 			statement.setQueryTimeout(30); // set timeout to 30 sec.
 
-			String sql = FileUtils.loadTextFile("/res/descricao.sql");
+			String sql = FileUtils.loadTextFile("src/main/java/res/descricao.sql");
 
 			statement.executeUpdate(sql);
 

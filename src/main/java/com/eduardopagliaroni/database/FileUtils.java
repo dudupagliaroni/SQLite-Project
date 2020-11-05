@@ -17,7 +17,7 @@ public class FileUtils {
 
 		InputStream inputStream = FileUtils.class.getResourceAsStream(filename);
 
-		InputStreamReader streamReader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
+		InputStreamReader streamReader = new InputStreamReader(inputStream);
 		BufferedReader reader = new BufferedReader(streamReader);
 		StringBuilder sb = new StringBuilder();
 		String line;
